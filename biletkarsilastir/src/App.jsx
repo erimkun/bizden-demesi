@@ -210,23 +210,27 @@ export default function App() {
     return () => mm.revert();
   }, { scope: appRef });
 
-  useGSAP(() => {
-    const root = appRef.current;
-    const anchor = panelAnchorRef.current;
-    if (!root || !anchor || !selectedEvent) return undefined;
+  useEffect(() => {
+    if (!selectedEvent) return undefined;
 
-    const mm = gsap.matchMedia();
+    let raf1 = 0;
+    let raf2 = 0;
 
-    mm.add({ reduceMotion: '(prefers-reduced-motion: reduce)' }, (context) => {
-      const { reduceMotion } = context.conditions;
+    const run = () => {
+      const anchor = panelAnchorRef.current;
+      if (!anchor) return;
 
       const panel = anchor.querySelector('.price-panel');
       if (!panel) return;
 
       const topOffset = 84;
+      const targetY = Math.max(anchor.getBoundingClientRect().top + window.scrollY - topOffset, 0);
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      gsap.killTweensOf(window);
 
       if (reduceMotion) {
-        window.scrollTo(0, Math.max(anchor.getBoundingClientRect().top + window.scrollY - topOffset, 0));
+        window.scrollTo(0, targetY);
         return;
       }
 
@@ -243,19 +247,27 @@ export default function App() {
       );
 
       gsap.to(window, {
-        duration: 0.65,
+        duration: 0.7,
         ease: 'power2.out',
         scrollTo: {
-          y: anchor,
-          offsetY: topOffset,
-          autoKill: true,
+          y: targetY,
+          autoKill: false,
         },
         overwrite: 'auto',
       });
+    };
+
+    // Wait for the panel DOM and layout to settle before measuring targetY.
+    raf1 = window.requestAnimationFrame(() => {
+      raf2 = window.requestAnimationFrame(run);
     });
 
-    return () => mm.revert();
-  }, { scope: appRef, dependencies: [selectedId], revertOnUpdate: true });
+    return () => {
+      if (raf1) window.cancelAnimationFrame(raf1);
+      if (raf2) window.cancelAnimationFrame(raf2);
+      gsap.killTweensOf(window);
+    };
+  }, [selectedEvent?.id]);
 
   return (
     <div className="app" ref={appRef}>
