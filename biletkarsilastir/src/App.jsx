@@ -8,6 +8,7 @@ import EventCard from './components/EventCard';
 import PricePanel from './components/PricePanel';
 import { CATEGORIES } from './data/mockData';
 import { usePriceData } from './hooks/usePriceData';
+import banner from './data/banner.png';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin);
 
@@ -286,18 +287,8 @@ export default function App() {
       <div className="app-glow app-glow-b" aria-hidden="true" />
 
       <header className="app-header">
-        <div className="header-inner">
-          <div className="brand">
-            <span className="brand-icon">◈</span>
-            <span className="brand-name">BiletKarşılaştır</span>
-          </div>
-          <div className="hero-pitch js-hero-pitch">
-            <h1 className="hero-title">Fiyatı tek tek gezmeden, en iyi bileti aynı ekranda bul.</h1>
-            <p className="hero-copy">
-              Etkinliğini seç, platform fiyatlarını ve 48 saatlik değişimi birlikte gör,
-              sonra doğrudan satın alma adımına geç.
-            </p>
-          </div>
+        <div className="header-inner banner-container">
+          <img src={banner} className="header-banner js-hero-pitch" alt="BiletKarşılaştır - Fiyatı tek tek gezmeden, en iyi bileti aynı ekranda bul." />
         </div>
       </header>
 

@@ -847,3 +847,21 @@ body {
     flex-wrap: wrap;
   }
 }
+
+.banner-container {
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 26px;
+}
+.header-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
