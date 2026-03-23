@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { useGSAP } from '@gsap/react';
 import StatusBar from './components/StatusBar';
 import EventCard from './components/EventCard';
@@ -8,11 +9,12 @@ import PricePanel from './components/PricePanel';
 import { CATEGORIES } from './data/mockData';
 import { usePriceData } from './hooks/usePriceData';
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin);
 
 export default function App() {
   const { events, status, lastFetch, countdown, refresh } = usePriceData();
   const appRef = useRef(null);
+  const panelAnchorRef = useRef(null);
   const [showIntro, setShowIntro] = useState(true);
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedId, setSelectedId] = useState(null);
@@ -202,25 +204,55 @@ export default function App() {
             scrub: 1,
           },
         });
-
-        if (selectedId) {
-          const panel = root.querySelector('.price-panel');
-          if (!panel) return;
-
-          gsap.from('.price-panel', {
-            y: 28,
-            autoAlpha: 0,
-            duration: 0.48,
-            ease: 'power3.out',
-            scrollTrigger: {
-              trigger: panel,
-              start: 'top 90%',
-              once: true,
-            },
-          });
-        }
       }
     );
+
+    return () => mm.revert();
+  }, { scope: appRef });
+
+  useGSAP(() => {
+    const root = appRef.current;
+    const anchor = panelAnchorRef.current;
+    if (!root || !anchor || !selectedEvent) return undefined;
+
+    const mm = gsap.matchMedia();
+
+    mm.add({ reduceMotion: '(prefers-reduced-motion: reduce)' }, (context) => {
+      const { reduceMotion } = context.conditions;
+
+      const panel = anchor.querySelector('.price-panel');
+      if (!panel) return;
+
+      const topOffset = 84;
+
+      if (reduceMotion) {
+        window.scrollTo(0, Math.max(anchor.getBoundingClientRect().top + window.scrollY - topOffset, 0));
+        return;
+      }
+
+      gsap.fromTo(
+        panel,
+        { y: 20, autoAlpha: 0 },
+        {
+          y: 0,
+          autoAlpha: 1,
+          duration: 0.42,
+          ease: 'power3.out',
+          overwrite: 'auto',
+        }
+      );
+
+      gsap.to(window, {
+        duration: 0.65,
+        ease: 'power2.out',
+        scrollTo: {
+          y: anchor,
+          offsetY: topOffset,
+          autoKill: true,
+        },
+        overwrite: 'auto',
+      });
+    });
 
     return () => mm.revert();
   }, { scope: appRef, dependencies: [selectedId], revertOnUpdate: true });
@@ -303,10 +335,12 @@ export default function App() {
         )}
 
         {selectedEvent && (
-          <PricePanel
-            event={selectedEvent}
-            onClose={() => setSelectedId(null)}
-          />
+          <div ref={panelAnchorRef} className="js-selected-panel-anchor">
+            <PricePanel
+              event={selectedEvent}
+              onClose={() => setSelectedId(null)}
+            />
+          </div>
         )}
       </main>
 
