@@ -287,8 +287,20 @@ export default function App() {
       <div className="app-glow app-glow-b" aria-hidden="true" />
 
       <header className="app-header">
-        <div className="header-inner banner-container">
-          <img src={banner} className="header-banner js-hero-pitch" alt="BiletKarşılaştır - Fiyatı tek tek gezmeden, en iyi bileti aynı ekranda bul." />
+        <div className="header-inner">
+          <div className="header-content js-hero-pitch">
+            <div className="brand">
+              <span className="brand-icon">◈</span>
+              <span className="brand-name">BiletKarşılaştır</span>
+            </div>
+            <h1 className="hero-title">Fiyatı tek tek gezmeden, en iyi bileti aynı ekranda bul.</h1>
+            <p className="hero-copy">
+              Etkinliğini seç, platform fiyatlarını ve 48 saatlik değişimi birlikte gör, sonra doğrudan satın alma adımına geç.
+            </p>
+          </div>
+          <div className="header-visual">
+            <img src={banner} className="banner-img" alt="BiletKarşılaştır Illustration" />
+          </div>
         </div>
       </header>
 
