@@ -1,8 +1,15 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": "vite",
-  "rootDirectory": "biletkarsilastir",
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
-  "outputDirectory": "dist"
+  "installCommand": "npm install && cd biletkarsilastir && npm install",
+  "buildCommand": "cd biletkarsilastir && npm run build",
+  "outputDirectory": "biletkarsilastir/dist",
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "/api/index" }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/scrape",
+      "schedule": "0 */4 * * *"
+    }
+  ]
 }

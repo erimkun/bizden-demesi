@@ -1,0 +1,14 @@
+{
+  "name": "bizden-demesi",
+  "version": "1.0.0",
+  "private": true,
+  "engines": { "node": ">=20.0.0" },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "axios": "^1.7.2",
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

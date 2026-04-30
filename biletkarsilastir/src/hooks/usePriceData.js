@@ -5,6 +5,8 @@ import {
   getTimeUntilUpdate, savePriceSnapshot
 } from '../utils/priceUtils';
 
+// Same Vercel domain — API lives at /api/* alongside the frontend.
+// Set VITE_API_URL only when running the frontend against a separate backend (e.g. local dev).
 const API_URL = import.meta.env.VITE_API_URL || '';
 
 function simulatePriceUpdate(events) {
