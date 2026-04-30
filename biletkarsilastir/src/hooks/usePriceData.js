@@ -49,19 +49,10 @@ export function usePriceData() {
     try {
       await new Promise(r => setTimeout(r, 600));
 
-      if (API_URL) {
-        const apiEvents = await fetchEventsFromApi();
-        setEvents(apiEvents);
-        setUsingApi(true);
-        savePriceSnapshot(apiEvents);
-      } else {
-        // No API configured — simulate price drift on the previous state
-        setEvents(prev => {
-          const updated = simulatePriceUpdate(prev);
-          savePriceSnapshot(updated);
-          return updated;
-        });
-      }
+      const apiEvents = await fetchEventsFromApi();
+      setEvents(apiEvents);
+      setUsingApi(true);
+      savePriceSnapshot(apiEvents);
 
       const now = new Date();
       setLastFetchTime(now);
