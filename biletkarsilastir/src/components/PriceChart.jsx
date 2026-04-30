@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const PLATFORM_COLORS = {
   biletix:      '#E8472A',
@@ -7,12 +7,41 @@ const PLATFORM_COLORS = {
   ticketmaster: '#026CDF',
 };
 
+const API_URL = import.meta.env.VITE_API_URL || '';
+
+async function fetchHistory(eventId) {
+  if (!API_URL) return null;
+  try {
+    const res = await fetch(`${API_URL}/api/events/${eventId}/history?hours=48`);
+    if (!res.ok) return null;
+    const json = await res.json();
+    if (!json.success) return null;
+    // API returns { [platform]: [{ price, available, scraped_at }, ...] }
+    // Convert to { [platform]: number[] } for Chart.js
+    const result = {};
+    for (const [pid, entries] of Object.entries(json.data.history)) {
+      result[pid] = entries.map(e => e.price);
+    }
+    return result;
+  } catch {
+    return null;
+  }
+}
+
 export default function PriceChart({ event, activePlatforms }) {
   const canvasRef = useRef(null);
   const chartRef = useRef(null);
+  const [history, setHistory] = useState(null);
 
   useEffect(() => {
-    if (!canvasRef.current) return;
+    setHistory(null);
+    fetchHistory(event.id).then(apiHistory => {
+      setHistory(apiHistory || event.priceHistory || {});
+    });
+  }, [event.id]);
+
+  useEffect(() => {
+    if (!canvasRef.current || history === null) return;
 
     const ctx = canvasRef.current.getContext('2d');
     if (chartRef.current) chartRef.current.destroy();
@@ -27,10 +56,10 @@ export default function PriceChart({ event, activePlatforms }) {
     });
 
     const datasets = activePlatforms
-      .filter(pid => event.priceHistory[pid])
+      .filter(pid => history[pid]?.length)
       .map(pid => ({
         label: pid,
-        data: event.priceHistory[pid],
+        data: history[pid],
         borderColor: PLATFORM_COLORS[pid] || '#888',
         backgroundColor: 'transparent',
         borderWidth: 1.5,
@@ -72,10 +101,15 @@ export default function PriceChart({ event, activePlatforms }) {
     });
 
     return () => { if (chartRef.current) chartRef.current.destroy(); };
-  }, [event, activePlatforms]);
+  }, [event.id, activePlatforms, history]);
 
   return (
     <div style={{ position: 'relative', height: 200, width: '100%' }}>
+      {history === null && (
+        <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#888', fontSize: 13 }}>
+          Yükleniyor…
+        </div>
+      )}
       <canvas ref={canvasRef} />
     </div>
   );

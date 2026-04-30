@@ -370,7 +370,7 @@ export default function App() {
       </div>
 
       <footer className="app-footer">
-        <p>BiletKarşılaştır — Faz 1 (Mock Data) · Fiyatlar {new Date().toLocaleDateString('tr-TR')} tarihi itibarıyla</p>
+        <p>BiletKarşılaştır — Faz 2 · Fiyatlar {new Date().toLocaleDateString('tr-TR')} tarihi itibarıyla</p>
         <p className="footer-note">Bu uygulama gerçek bilet satışı yapmaz. Fiyat bilgileri temsilidir.</p>
       </footer>
     </div>
