@@ -1,35 +1,36 @@
-name: Deploy to Vercel
+name: Vercel Deploy Check
+
+# Vercel's Git integration handles the actual deployment automatically
+# on every push to master. This workflow just waits for Vercel to finish
+# and reports the deployment URL as a job summary.
 
 on:
   push:
     branches: [master]
 
 jobs:
-  deploy:
-    name: Deploy frontend
+  verify-deploy:
+    name: Verify Vercel deployment
     runs-on: ubuntu-latest
-    environment: production
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - name: Wait for Vercel deployment
+        uses: patrickedqvist/wait-for-vercel-preview@v1.3.2
+        id: vercel
         with:
-          node-version: 20
-          cache: npm
-          cache-dependency-path: biletkarsilastir/package-lock.json
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: production
+          max_timeout: 120
+        continue-on-error: true
 
-      - name: Install Vercel CLI
-        run: npm install -g vercel@latest
-
-      - name: Pull Vercel environment
-        run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
-
-      - name: Build project
-        run: vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
-        env:
-          VITE_API_URL: ${{ vars.VITE_API_URL }}
-
-      - name: Deploy to Vercel
-        run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Report deployment URL
+        run: |
+          echo "### Vercel Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -n "${{ steps.vercel.outputs.url }}" ]; then
+            echo "✅ Live at: ${{ steps.vercel.outputs.url }}" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "ℹ️ Vercel is deploying — check https://vercel.com/erimkuns-projects/bizden-demesi for status" >> $GITHUB_STEP_SUMMARY
+          fi

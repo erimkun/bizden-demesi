@@ -1,6 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "installCommand": "npm install --prefix biletkarsilastir",
-  "buildCommand": "npm run build --prefix biletkarsilastir",
-  "outputDirectory": "biletkarsilastir/dist"
+  "framework": "vite",
+  "rootDirectory": "biletkarsilastir",
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "outputDirectory": "dist"
 }
