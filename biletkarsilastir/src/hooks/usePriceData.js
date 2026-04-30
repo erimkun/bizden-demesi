@@ -72,13 +72,8 @@ export function usePriceData() {
     }
   }, []); // no dependency on `events` — uses functional updater instead
 
-  useEffect(() => {
-    if (!getLastFetchTime()) {
-      setLastFetchTime(new Date());
-      setLastFetch(new Date());
-      savePriceSnapshot(EVENTS);
-    }
-  }, []);
+  // Fetch real data on mount
+  useEffect(() => { doFetch(); }, [doFetch]);
 
   useEffect(() => {
     timerRef.current = setInterval(() => {
