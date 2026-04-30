@@ -5,11 +5,5 @@
   "outputDirectory": "biletkarsilastir/dist",
   "rewrites": [
     { "source": "/api/:path*", "destination": "/api/index" }
-  ],
-  "crons": [
-    {
-      "path": "/api/cron/scrape",
-      "schedule": "0 */4 * * *"
-    }
   ]
 }
