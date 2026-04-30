@@ -11,6 +11,4 @@ jobs:
     steps:
       - name: Trigger scrape
         run: |
-          curl -s -f -X POST ${{ secrets.APP_URL }}/api/scrape/trigger \
-            -H "x-admin-key: ${{ secrets.ADMIN_KEY }}" \
-            -H "Content-Type: application/json"
+          curl -s -f -X POST ${{ secrets.APP_URL }}/api/scrape/trigger
