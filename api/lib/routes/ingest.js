@@ -67,24 +67,37 @@ router.post('/ingest', requireSignature, async (req, res) => {
   res.json({ success: true, snapshotsWritten });
 });
 
-// POST /api/scrape/enrich-metadata
+// POST /api/scrape/enrich-metadata — upserts event by internal_name
 router.post('/enrich-metadata', requireSignature, async (req, res) => {
   const { internal_name, name, image_url, venue, date_text } = req.body;
   if (!internal_name) {
     return res.status(400).json({ success: false, error: 'internal_name required' });
   }
-  await sql(
-    `UPDATE events
-       SET name             = COALESCE($2, name),
-           image_url        = COALESCE($3, image_url),
-           venue            = COALESCE($4, venue),
-           date             = COALESCE($5, date),
-           last_enriched_at = NOW(),
-           updated_at       = NOW()
-     WHERE internal_name = $1`,
-    [internal_name, name || null, image_url || null, venue || null, date_text || null]
+
+  const [existing] = await sql('SELECT id FROM events WHERE internal_name = $1', [internal_name]);
+
+  if (existing) {
+    await sql(
+      `UPDATE events
+         SET name             = COALESCE($2, name),
+             image_url        = COALESCE($3, image_url),
+             venue            = COALESCE($4, venue),
+             date             = COALESCE($5, date),
+             last_enriched_at = NOW(),
+             updated_at       = NOW()
+       WHERE id = $1`,
+      [existing.id, name || null, image_url || null, venue || null, date_text || null]
+    );
+    return res.json({ success: true, event_id: existing.id, created: false });
+  }
+
+  const [row] = await sql(
+    `INSERT INTO events (internal_name, name, category, image_url, venue, date, last_enriched_at)
+     VALUES ($1, $2, 'konser', $3, $4, $5, NOW())
+     RETURNING id`,
+    [internal_name, name || internal_name, image_url || null, venue || null, date_text || null]
   );
-  res.json({ success: true });
+  res.json({ success: true, event_id: row.id, created: true });
 });
 
 module.exports = router;

@@ -1,7 +1,35 @@
 [
   {
-    "internal_name": "PLACEHOLDER-event-1",
-    "biletix_url": null,
+    "internal_name": "ebru-gundes",
+    "biletix_url": "https://www.biletix.com/artist/23/TURKIYE/tr/ebru-gundes",
+    "passo_url": null,
+    "eventbrite_id": null,
+    "ticketmaster_id": null
+  },
+  {
+    "internal_name": "yalin",
+    "biletix_url": "https://www.biletix.com/artist/91/TURKIYE/tr/yalin",
+    "passo_url": null,
+    "eventbrite_id": null,
+    "ticketmaster_id": null
+  },
+  {
+    "internal_name": "tolga-cevik",
+    "biletix_url": "https://www.biletix.com/artist/10124941/TURKIYE/tr/tolga-cevik",
+    "passo_url": null,
+    "eventbrite_id": null,
+    "ticketmaster_id": null
+  },
+  {
+    "internal_name": "biletix-5mh09",
+    "biletix_url": "https://www.biletix.com/etkinlik/5MH09/TURKIYE/tr",
+    "passo_url": null,
+    "eventbrite_id": null,
+    "ticketmaster_id": null
+  },
+  {
+    "internal_name": "biletix-5pq73",
+    "biletix_url": "https://www.biletix.com/etkinlik/5PQ73/TURKIYE/tr",
     "passo_url": null,
     "eventbrite_id": null,
     "ticketmaster_id": null

@@ -54,7 +54,7 @@ async function enrichOnce(event, opts) {
 
 async function main() {
   const dryRun = process.argv.includes('--dry-run');
-  const enrich = process.argv.includes('--enrich');
+  const skipEnrich = process.argv.includes('--no-enrich');
   const appUrl = process.env.APP_URL;
   const secret = process.env.INGEST_SECRET;
 
@@ -71,7 +71,7 @@ async function main() {
   let okCount = 0, errCount = 0;
   for (const event of events) {
     try {
-      if (enrich) await enrichOnce(event, { appUrl, secret });
+      if (!skipEnrich && !dryRun) await enrichOnce(event, { appUrl, secret });
       const results = await collectOne(event);
       console.log(`[scrape] ${event.internal_name}:`,
         results.map(r => `${r.platform_id}=${r.status}${r.amount ? `(${r.amount})` : ''}`).join(', '));
