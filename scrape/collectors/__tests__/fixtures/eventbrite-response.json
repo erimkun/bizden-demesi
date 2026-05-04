@@ -1,0 +1,10 @@
+{
+  "id": "evt-12345",
+  "name": { "text": "Sezen Aksu Concert" },
+  "url": "https://www.eventbrite.com/e/sezen-aksu-12345",
+  "ticket_classes": [
+    { "name": "General",   "cost": { "value": 132000, "currency": "TRY" }, "on_sale_status": "AVAILABLE" },
+    { "name": "VIP",       "cost": { "value": 250000, "currency": "TRY" }, "on_sale_status": "SOLD_OUT" },
+    { "name": "Front Row", "cost": { "value": 200000, "currency": "TRY" }, "on_sale_status": "AVAILABLE" }
+  ]
+}
