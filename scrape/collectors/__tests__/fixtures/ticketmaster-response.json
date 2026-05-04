@@ -1,0 +1,11 @@
+{
+  "id": "K8vZ9171Sa7",
+  "name": "Hamlet",
+  "url": "https://www.ticketmaster.com/event/K8vZ9171Sa7",
+  "priceRanges": [
+    { "type": "standard", "currency": "TRY", "min": 270, "max": 580 }
+  ],
+  "dates": {
+    "status": { "code": "onsale" }
+  }
+}
