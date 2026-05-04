@@ -82,6 +82,15 @@ async function initSchema() {
     )
   `;
 
+  // Phase 3 additions — idempotent
+  await sql`ALTER TABLE events ADD COLUMN IF NOT EXISTS internal_name TEXT`;
+  await sql`CREATE UNIQUE INDEX IF NOT EXISTS idx_events_internal_name ON events(internal_name) WHERE internal_name IS NOT NULL`;
+  await sql`ALTER TABLE events ADD COLUMN IF NOT EXISTS last_enriched_at TIMESTAMPTZ`;
+
+  await sql`ALTER TABLE event_platform_links ADD COLUMN IF NOT EXISTS platform_event_id TEXT`;
+  await sql`ALTER TABLE event_platform_links ADD COLUMN IF NOT EXISTS last_status TEXT`;
+  await sql`ALTER TABLE event_platform_links ADD COLUMN IF NOT EXISTS last_status_at TIMESTAMPTZ`;
+
   console.log('[db] Schema ready');
 }
 
