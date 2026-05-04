@@ -32,12 +32,9 @@ jobs:
         env:
           VITE_API_URL: ''
 
-  backend:
-    name: Backend — install & check
+  scrape-tests:
+    name: Scrape collectors — tests
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: backend
 
     steps:
       - uses: actions/checkout@v4
@@ -47,10 +44,9 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: backend/package-lock.json
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Verify server can be required
-        run: node -e "require('./src/db/database')" || true
+      - name: Run tests
+        run: npm test
