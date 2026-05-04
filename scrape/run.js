@@ -9,9 +9,9 @@ const passo        = require('./collectors/passo');
 const eventbrite   = require('./collectors/eventbrite');
 const ticketmaster = require('./collectors/ticketmaster');
 
+// Cloud runner handles API-based platforms only.
+// Biletix and Passo are SPA + auth-walled — handled by the desktop scraper in Phase 4.
 const COLLECTORS = [
-  { id: 'biletix',      mod: biletix,      key: 'biletix_url',     type: 'url' },
-  { id: 'passo',        mod: passo,        key: 'passo_url',       type: 'url' },
   { id: 'eventbrite',   mod: eventbrite,   key: 'eventbrite_id',   type: 'apiId' },
   { id: 'ticketmaster', mod: ticketmaster, key: 'ticketmaster_id', type: 'apiId' },
 ];
@@ -38,10 +38,15 @@ async function ingest(internalName, results, opts) {
 }
 
 async function enrichOnce(event, opts) {
-  if (!event.biletix_url) return;
+  // Use whatever metadata is provided in the JSON entry directly — no scraping.
+  const meta = {
+    name: event.name || null,
+    image_url: event.image_url || null,
+    venue: event.venue || null,
+    date_text: event.date || null,
+  };
+  if (!meta.name && !meta.image_url && !meta.venue) return;
   try {
-    const meta = await biletix.fetchMetadata(event.biletix_url);
-    if (!meta) return;
     const payload = { internal_name: event.internal_name, ...meta };
     const signature = signPayload(payload, opts.secret);
     await axios.post(`${opts.appUrl}/api/scrape/enrich-metadata`, payload, {
