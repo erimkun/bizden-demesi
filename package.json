@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "engines": { "node": ">=20.0.0" },
+  "scripts": {
+    "test": "jest",
+    "scrape": "node scrape/run.js",
+    "scrape:dry": "node scrape/run.js --dry-run"
+  },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
     "axios": "^1.7.2",
@@ -10,5 +15,12 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "jest": {
+    "testMatch": ["**/__tests__/**/*.test.js"],
+    "testPathIgnorePatterns": ["/node_modules/", "/biletkarsilastir/"]
   }
 }
