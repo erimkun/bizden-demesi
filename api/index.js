@@ -15,7 +15,7 @@ app.use(express.json());
 app.use('/api/platforms', require('./lib/routes/platforms'));
 app.use('/api/events',    require('./lib/routes/events'));
 app.use('/api/events',    require('./lib/routes/prices'));   // /:id/prices  /:id/history
-app.use('/api/scrape',    require('./lib/routes/admin'));
+app.use('/api/scrape',    require('./lib/routes/ingest'));
 
 // ── Health ────────────────────────────────────────────────────────────────────
 
