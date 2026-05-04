@@ -52,16 +52,24 @@ async function enrichOnce(event, opts) {
   }
 }
 
+function normalizeUrl(raw) {
+  if (!raw) return raw;
+  let u = raw.trim().replace(/\/+$/, '');
+  if (!/^https?:\/\//i.test(u)) u = `https://${u}`;
+  return u;
+}
+
 async function main() {
   const dryRun = process.argv.includes('--dry-run');
   const skipEnrich = process.argv.includes('--no-enrich');
-  const appUrl = process.env.APP_URL;
+  const appUrl = normalizeUrl(process.env.APP_URL);
   const secret = process.env.INGEST_SECRET;
 
   if (!dryRun && (!appUrl || !secret)) {
     console.error('APP_URL and INGEST_SECRET env vars required (or pass --dry-run)');
     process.exit(1);
   }
+  console.log(`[scrape] target: ${appUrl}`);
 
   const events = JSON.parse(
     fs.readFileSync(path.join(__dirname, '..', 'events-to-track.json'), 'utf8')
