@@ -1,0 +1,21 @@
+{
+  "name": "bizden-demesi-desktop-scraper",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "discover:biletix": "node discover-biletix.js",
+    "discover:biletix:dry": "node discover-biletix.js --dry-run",
+    "scrape": "node run.js",
+    "scrape:dry": "node run.js --dry-run",
+    "scrape:headed": "node run.js --headed"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.52.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

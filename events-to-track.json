@@ -1,1 +1,562 @@
-[]
+[
+  {
+    "internal_name": "measurecamp-istanbul-2026",
+    "name": "MeasureCamp Istanbul 2026",
+    "venue": "Orjin Maslak",
+    "date": "2026-05-09 09:00-17:00",
+    "eventbrite_id": "1985209263347"
+  },
+  {
+    "internal_name": "access-mba-istanbul-2026-05",
+    "name": "Power Your Future at the Access MBA in Istanbul",
+    "venue": "Sofitel Istanbul Taksim",
+    "date": "2026-05-09 11:00-15:15",
+    "eventbrite_id": "1985440312421"
+  },
+  {
+    "internal_name": "istanbul-vc-world-summit-2026",
+    "name": "Istanbul 2026 Venture Capital World Summit",
+    "venue": "Istanbul World Trade Center",
+    "date": "2026-11-03 13:00-17:30",
+    "eventbrite_id": "1985683431597"
+  },
+  {
+    "internal_name": "teacher-istanbul-2026",
+    "name": "Teacher 2026 - International Teaching Conference, 04-05 October, Istanbul",
+    "venue": "Nippon Hotel, Taksim, Istanbul",
+    "date": "2026-10-04 to 2026-10-05",
+    "eventbrite_id": "1495125433419",
+    "eventbrite_url": "https://www.eventbrite.com/e/teacher-2026-international-teaching-conference-04-05-october-istanbul-tickets-1495125433419",
+    "discovery_source_url": "https://www.eventbrite.com/d/turkey--all-locations/all-events/"
+  },
+  {
+    "internal_name": "growtech-antalya-2026",
+    "name": "GROWTECH. ANTALYA",
+    "venue": "ANFAS Expo Center",
+    "date": "2026-11-24 to 2026-11-27",
+    "eventbrite_id": "1978409596360"
+  },
+  {
+    "internal_name": "silentfest-antalya-2026",
+    "name": "SilentFest 2026 | Silent Adventures | Deaf International Festival - Antalya",
+    "venue": "Antalya, venue to be announced",
+    "date": "2026-05-26 to 2026-05-31",
+    "eventbrite_id": "1985158542640"
+  },
+  {
+    "internal_name": "dma-conference-6-8-may-2026",
+    "name": "Dma Conference 6 8 May 2026",
+    "eventbrite_id": "1972368324754",
+    "eventbrite_url": "https://www.eventbrite.co.uk/e/dma-conference-6-8-may-2026-tickets-1972368324754",
+    "discovery_source_url": "https://www.eventbrite.com/d/turkey--all-locations/all-events/"
+  },
+  {
+    "internal_name": "glass-shaping-with-flame-workshop-experience-with-a-glass-master-artisan",
+    "name": "Glass Shaping With Flame Workshop Experience With A Glass Master Artisan",
+    "eventbrite_id": "1769941636079",
+    "eventbrite_url": "https://www.eventbrite.de/e/glass-shaping-with-flame-workshop-experience-with-a-glass-master-artisan-tickets-1769941636079",
+    "discovery_source_url": "https://www.eventbrite.com/d/turkey--all-locations/all-events/"
+  },
+  {
+    "internal_name": "lagoon-retreat-turkey",
+    "name": "Lagoon Retreat Turkey",
+    "eventbrite_id": "1769458591279",
+    "eventbrite_url": "https://www.eventbrite.com/e/lagoon-retreat-turkey-tickets-1769458591279",
+    "discovery_source_url": "https://www.eventbrite.com/d/turkey--all-locations/all-events/"
+  },
+  {
+    "internal_name": "istanbul-fintech-week-2026-smart-embedded-and-tokenized",
+    "name": "Istanbul Fintech Week 2026 Smart Embedded And Tokenized",
+    "eventbrite_id": "1801861830239",
+    "eventbrite_url": "https://www.eventbrite.ca/e/istanbul-fintech-week-2026-smart-embedded-and-tokenized-tickets-1801861830239",
+    "discovery_source_url": "https://www.eventbrite.com/d/turkey--all-locations/all-events/"
+  },
+  {
+    "internal_name": "seosummitai",
+    "name": "Seosummitai",
+    "eventbrite_id": "1979724986728",
+    "eventbrite_url": "https://www.eventbrite.com/e/seosummitai-tickets-1979724986728",
+    "discovery_source_url": "https://www.eventbrite.com/d/turkey--all-locations/all-events/"
+  },
+  {
+    "internal_name": "hackerx-istanbul-employer-ticket-79",
+    "name": "Hackerx Istanbul Employer Ticket 79",
+    "eventbrite_id": "1980050422114",
+    "eventbrite_url": "https://www.eventbrite.com/e/hackerx-istanbul-employer-ticket-79-tickets-1980050422114",
+    "discovery_source_url": "https://www.eventbrite.com/d/turkey--all-locations/all-events/"
+  },
+  {
+    "internal_name": "tiip-istanbul-2025-level-2",
+    "name": "Tiip Istanbul 2025 Level 2",
+    "eventbrite_id": "1983970940490",
+    "eventbrite_url": "https://www.eventbrite.com/e/tiip-istanbul-2025-level-2-tickets-1983970940490",
+    "discovery_source_url": "https://www.eventbrite.com/d/turkey--all-locations/all-events/"
+  },
+  {
+    "internal_name": "global-debate-championshipeuropean-voice-assembly-2026",
+    "name": "Global Debate Championshipeuropean Voice Assembly 2026",
+    "eventbrite_id": "1980775253103",
+    "eventbrite_url": "https://www.eventbrite.com/e/global-debate-championshipeuropean-voice-assembly-2026-tickets-1980775253103",
+    "discovery_source_url": "https://www.eventbrite.com/d/turkey--all-locations/all-events/"
+  },
+  {
+    "internal_name": "bbs-grain-balkans-black-sea-grain-forum",
+    "name": "Bbs Grain Balkans Black Sea Grain Forum",
+    "eventbrite_id": "1982667122736",
+    "eventbrite_url": "https://www.eventbrite.com/e/bbs-grain-balkans-black-sea-grain-forum-tickets-1982667122736",
+    "discovery_source_url": "https://www.eventbrite.com/d/turkey--all-locations/all-events/"
+  },
+  {
+    "internal_name": "biletix-tolgshow-5mh09",
+    "name": "Tolga Cevik - Tolgshow",
+    "venue": "Derince Belediyesi Gosteri Merkezi, Kocaeli",
+    "date": "2026-05-08 21:00",
+    "biletix_url": "https://www.biletix.com/performance/5MH09/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-suc-ve-ceza-5pq73",
+    "name": "Suc ve Ceza",
+    "venue": "Bakirkoy Butik Sahne, Istanbul",
+    "date": "2026-05-04 17:00",
+    "biletix_url": "https://www.biletix.com/performance/5PQ73/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-masumiyet-muzesi-5pq69",
+    "name": "Masumiyet Muzesi",
+    "venue": "Bakirkoy Butik Sahne, Istanbul",
+    "date": "2026-05-04 19:30",
+    "biletix_url": "https://www.biletix.com/performance/5PQ69/002/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-yuzdeyuz-muzik-sunar-the-offspring-5gnc3-001",
+    "name": "Yüzdeyüz Müzik Sunar : The Offspring",
+    "venue": "place Life Park, İstanbul",
+    "date": "10 Temmuz 2026 Cuma\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5GNC3/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5GNC3/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-yuzdeyuz-metal-sunar-babymetal-5gnc1-001",
+    "name": "Yüzdeyüz Metal Sunar: Babymetal",
+    "venue": "place Life Park, İstanbul",
+    "date": "1 Temmuz 2026 Çarşamba\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5GNC1/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5GNC1/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-hamlet-5ph00-005",
+    "name": "Hamlet",
+    "venue": "place Hilltown Seyirlik Sahne , İstanbul",
+    "date": "15 Mayıs 2026 Cuma\n•\n20:30",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5PH00/005/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5PH00/005/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-hamlet-5ph00-006",
+    "name": "Hamlet",
+    "venue": "place Hilltown Seyirlik Sahne , İstanbul",
+    "date": "13 Haziran 2026 Cumartesi\n•\n20:30",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5PH00/006/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5PH00/006/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-kumarbaz-5ph12-004",
+    "name": "Kumarbaz",
+    "venue": "place Hilltown Seyirlik Sahne , İstanbul",
+    "date": "14 Mayıs 2026 Perşembe\n•\n20:30",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5PH12/004/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5PH12/004/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-the-cardigans-fatma-turgut-ankara-echoes-5jbaf-001",
+    "name": "The Cardigans, Fatma Turgut, Ankara Echoes",
+    "venue": "place Life Park, İstanbul",
+    "date": "18 Temmuz 2026 Cumartesi\n•\n16:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5JBAF/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5JBAF/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-sertab-erener-5yaz0-001",
+    "name": "Sertab Erener",
+    "venue": "place KüçükÇiftlik Park, İstanbul",
+    "date": "16 Mayıs 2026 Cumartesi\n•\n18:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5YAZ0/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5YAZ0/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-natasa-theodoridou-5snk1-001",
+    "name": "Natasa Theodoridou",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "7 Haziran 2026 Pazar\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5SNK1/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5SNK1/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-an-epic-symphony-emrah-5ea62-001",
+    "name": "An Epic Symphony & Emrah",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "4 Haziran 2026 Perşembe\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5EA62/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5EA62/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-100-muzik-sunar-blind-fest-tom-odell-5ep09-001",
+    "name": "%100 Müzik Sunar: Blind Fest - Tom Odell",
+    "venue": "place Life Park, İstanbul",
+    "date": "23 Haziran 2026 Salı\n•\n22:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5EP09/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5EP09/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-nazan-oncel-5jba3-001",
+    "name": "Nazan Öncel",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "17 Mayıs 2026 Pazar\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5JBA3/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5JBA3/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-buray-55af8-001",
+    "name": "Buray",
+    "venue": "place Maximum Uniq Açıkhava, İstanbul",
+    "date": "28 Haziran 2026 Pazar\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/55AF8/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/55AF8/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-chris-isaak-5ep04-002",
+    "name": "Chris Isaak",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "20 Haziran 2026 Cumartesi\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5EP04/002/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5EP04/002/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-the-black-keys-5ep11-001",
+    "name": "The Black Keys",
+    "venue": "place KüçükÇiftlik Park, İstanbul",
+    "date": "15 Eylül 2026 Salı\n•\n22:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5EP11/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5EP11/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-rooftop-festival-istanbul-2026-5cc00-002",
+    "name": "Rooftop Festival İstanbul 2026",
+    "venue": "place Çeşitli Teraslar, İstanbul",
+    "date": "16 Mayıs 2026 Cumartesi\n•\n15:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5CC00/002/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5CC00/002/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-seksendort-20-y-l-konseri-55ae1-001",
+    "name": "Seksendört 20. Yıl Konseri",
+    "venue": "place Zorlu PSM - Turkcell Sahnesi, İstanbul",
+    "date": "17 Mayıs 2026 Pazar\n•\n20:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/55AE1/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/55AE1/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-melis-fis-55af4-001",
+    "name": "Melis Fis",
+    "venue": "place Maximum Uniq Açıkhava, İstanbul",
+    "date": "7 Haziran 2026 Pazar\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/55AF4/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/55AF4/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-gipsy-kings-feat-tonino-baliardo-5my07-001",
+    "name": "Gipsy Kings feat Tonino Baliardo",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "18 Eylül 2026 Cuma\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5MY07/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5MY07/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-yuzdeyuz-metal-sunar-alice-cooper-5gnc0-001",
+    "name": "Yüzdeyüz Metal Sunar: Alice Cooper",
+    "venue": "place Life Park, İstanbul",
+    "date": "13 Haziran 2026 Cumartesi\n•\n15:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5GNC0/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5GNC0/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-dystinct-5my10-001",
+    "name": "Dystinct",
+    "venue": "place Maximum Uniq Açıkhava, İstanbul",
+    "date": "7 Ağustos 2026 Cuma\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5MY10/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5MY10/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-ricky-martin-5azu3-001",
+    "name": "Ricky Martin",
+    "venue": "place KüçükÇiftlik Park, İstanbul",
+    "date": "11 Temmuz 2026 Cumartesi\n•\n18:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5AZU3/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5AZU3/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-pantera-5jb62-002",
+    "name": "Pantera",
+    "venue": "place Ataköy Marina Arena, İstanbul",
+    "date": "12 Temmuz 2026 Pazar\n•\n21:30",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5JB62/002/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5JB62/002/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-ragheb-alama-5ln01-001",
+    "name": "Ragheb Alama",
+    "venue": "place Volkswagen Arena, İstanbul",
+    "date": "19 Haziran 2026 Cuma\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LN01/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LN01/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-an-epic-symphony-sibel-can-5ea03-001",
+    "name": "An Epic Symphony & Sibel Can",
+    "venue": "place Bostancı Gösteri Merkezi, İstanbul",
+    "date": "15 Mayıs 2026 Cuma\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5EA03/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5EA03/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-leyla-the-band-5mn14-001",
+    "name": "Leyla The Band",
+    "venue": "place KüçükÇiftlik Park, İstanbul",
+    "date": "19 Haziran 2026 Cuma\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5MN14/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5MN14/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-black-label-society-5ep07-001",
+    "name": "Black Label Society",
+    "venue": "place KüçükÇiftlik Park, İstanbul",
+    "date": "22 Temmuz 2026 Çarşamba\n•\n22:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5EP07/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5EP07/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-gregory-porter-5pogp-001",
+    "name": "Gregory Porter",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "5 Temmuz 2026 Pazar\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5POGP/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5POGP/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-derya-ulug-5dt73-001",
+    "name": "Derya Uluğ",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "6 Temmuz 2026 Pazartesi\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5DT73/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5DT73/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-kumarbaz-5ph12-005",
+    "name": "Kumarbaz",
+    "venue": "place Hilltown Seyirlik Sahne , İstanbul",
+    "date": "12 Haziran 2026 Cuma\n•\n20:30",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5PH12/005/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5PH12/005/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-kuyucakl-yusuf-5ph08-005",
+    "name": "Kuyucaklı Yusuf",
+    "venue": "place Hilltown Seyirlik Sahne , İstanbul",
+    "date": "8 Mayıs 2026 Cuma\n•\n20:30",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5PH08/005/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5PH08/005/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-kuyucakl-yusuf-5ph08-006",
+    "name": "Kuyucaklı Yusuf",
+    "venue": "place Hilltown Seyirlik Sahne , İstanbul",
+    "date": "6 Haziran 2026 Cumartesi\n•\n20:30",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5PH08/006/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5PH08/006/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-parmos-otel-bordo-basketbol-2025-2026-sezon-kombine-4bbs0-001",
+    "name": "Parmos Otel Bordo Basketbol 2025 - 2026 Sezon Kombine",
+    "venue": "place Bandırma 17 Eylül Üniversitesi Spor Salonu, Balıkesir",
+    "date": "6 Mayıs 2026 Çarşamba\n•\n19:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/4BBS0/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/4BBS0/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-cmf-gold-haremspor-2025-2026-kombine-4hrmk-001",
+    "name": "CMF Gold Haremspor 2025-2026 Kombine",
+    "venue": "place Beylikdüzü Spor Kompleksi, İstanbul",
+    "date": "31 Mayıs 2026 Pazar\n•\n23:59",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/4HRMK/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/4HRMK/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-ii-salon-du-chocolat-istanbul-11-12-aral-k-2026-52w00-001",
+    "name": "II. Salon Du Chocolat İstanbul 11-12 Aralık 2026",
+    "venue": "place İstanbul Kongre Merkezi, İstanbul",
+    "date": "12 Aralık 2026",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/52W00/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/52W00/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-serdar-ortac-5lw81-001",
+    "name": "Serdar Ortaç",
+    "venue": "place İzmir Kültürpark Açıkhava Tiyatrosu, İzmir",
+    "date": "14 Mayıs 2026 Perşembe\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW81/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW81/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-hande-bizi-sezene-gotur-5lw79-001",
+    "name": "Hande Bizi Sezene Götür",
+    "venue": "place İzmir Kültürpark Açıkhava Tiyatrosu, İzmir",
+    "date": "15 Mayıs 2026 Cuma\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW79/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW79/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-erkan-ogur-ismail-hakk-demircioglu-erdal-erzincan-5lw93-001",
+    "name": "Erkan Oğur - İsmail Hakkı Demircioğlu - Erdal Erzincan",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "24 Mayıs 2026 Pazar\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW93/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW93/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-hande-bizi-sezene-gotur-5lw78-001",
+    "name": "Hande Bizi Sezene Götür",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "25 Mayıs 2026 Pazartesi\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW78/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW78/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-hande-bizi-sezene-gotur-5lw83-001",
+    "name": "Hande Bizi Sezene Götür",
+    "venue": "place Oran Açık Hava Sahnesi, Ankara",
+    "date": "3 Haziran 2026 Çarşamba\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW83/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW83/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-emre-altug-5lw88-001",
+    "name": "Emre Altuğ",
+    "venue": "place Çukurova Üniversitesi Açıkhava Tiyatrosu, Adana",
+    "date": "3 Haziran 2026 Çarşamba\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW88/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW88/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-serdar-ortac-5lw84-001",
+    "name": "Serdar Ortaç",
+    "venue": "place Çukurova Üniversitesi Açıkhava Tiyatrosu, Adana",
+    "date": "4 Haziran 2026 Perşembe\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW84/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW84/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-mustafa-sandal-5lw89-001",
+    "name": "Mustafa Sandal",
+    "venue": "place Oran Açık Hava Sahnesi, Ankara",
+    "date": "4 Haziran 2026 Perşembe\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW89/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW89/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-mustafa-sandal-5lw92-001",
+    "name": "Mustafa Sandal",
+    "venue": "place Çukurova Üniversitesi Açıkhava Tiyatrosu, Adana",
+    "date": "7 Haziran 2026 Pazar\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW92/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW92/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-hande-yener-5lw86-001",
+    "name": "Hande Yener",
+    "venue": "place Çukurova Üniversitesi Açıkhava Tiyatrosu, Adana",
+    "date": "9 Haziran 2026 Salı\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW86/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW86/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-ajda-pekkan-5lw75-001",
+    "name": "Ajda Pekkan",
+    "venue": "place Oran Açık Hava Sahnesi, Ankara",
+    "date": "10 Haziran 2026 Çarşamba\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW75/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW75/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-hande-yener-5lw98-001",
+    "name": "Hande Yener",
+    "venue": "place GOPSM – Gaziantep Odeon Performans Sanatları Merke..., Gaziantep",
+    "date": "10 Haziran 2026 Çarşamba\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW98/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW98/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-emre-altug-5lw85-001",
+    "name": "Emre Altuğ",
+    "venue": "place Oran Açık Hava Sahnesi, Ankara",
+    "date": "11 Haziran 2026 Perşembe\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW85/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW85/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-ajda-pekkan-5lw76-001",
+    "name": "Ajda Pekkan",
+    "venue": "place İzmir Kültürpark Açıkhava Tiyatrosu, İzmir",
+    "date": "13 Haziran 2026 Cumartesi\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5LW76/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5LW76/001/TURKIYE/tr"
+  }
+]

@@ -34,3 +34,7 @@ all_code.txt
 
 # SQLite database
 backend/data/
+
+# Desktop scraper local browser/session artifacts
+desktop-scraper/.browser-profile/
+desktop-scraper/artifacts/

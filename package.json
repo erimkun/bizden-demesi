@@ -5,6 +5,10 @@
   "engines": { "node": ">=20.0.0" },
   "scripts": {
     "test": "jest",
+    "discover:biletix": "npm --prefix desktop-scraper run discover:biletix",
+    "discover:biletix:dry": "npm --prefix desktop-scraper run discover:biletix:dry",
+    "discover:eventbrite": "node scrape/discover-eventbrite.js",
+    "discover:eventbrite:dry": "node scrape/discover-eventbrite.js --dry-run",
     "scrape": "node scrape/run.js",
     "scrape:dry": "node scrape/run.js --dry-run"
   },

@@ -38,16 +38,16 @@ async function ingest(internalName, results, opts) {
 }
 
 async function enrichOnce(event, opts) {
-  // Use whatever metadata is provided in the JSON entry directly — no scraping.
-  const meta = {
-    name: event.name || null,
+  // Always called — ensures the event row exists in the DB before ingest tries to write to it.
+  // Uses whatever metadata is provided in the JSON entry; backend falls back to internal_name.
+  const payload = {
+    internal_name: event.internal_name,
+    name:      event.name || null,
     image_url: event.image_url || null,
-    venue: event.venue || null,
+    venue:     event.venue || null,
     date_text: event.date || null,
   };
-  if (!meta.name && !meta.image_url && !meta.venue) return;
   try {
-    const payload = { internal_name: event.internal_name, ...meta };
     const signature = signPayload(payload, opts.secret);
     await axios.post(`${opts.appUrl}/api/scrape/enrich-metadata`, payload, {
       headers: { 'X-Signature': signature, 'Content-Type': 'application/json' },

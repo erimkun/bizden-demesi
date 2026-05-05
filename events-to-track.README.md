@@ -30,6 +30,23 @@ Both runners share `internal_name` to write into the same event row.
 
 ## How to find IDs
 
+### Automatic Eventbrite discovery
+Run the discovery command to scan public Eventbrite Turkey listing pages and merge new event IDs into `events-to-track.json`.
+
+```bash
+npm run discover:eventbrite:dry
+npm run discover:eventbrite
+```
+
+Useful options:
+
+```bash
+npm run discover:eventbrite:dry -- --pages 2 --max 25
+npm run discover:eventbrite -- --urls "https://www.eventbrite.com/d/turkey/istanbul/,https://www.eventbrite.com/d/turkey/antalya/"
+```
+
+If `EVENTBRITE_TOKEN` is set, discovery enriches each found ID with Eventbrite API metadata. Without a token, it still extracts IDs and readable names from public event URLs.
+
 ### Eventbrite
 1. Go to https://www.eventbrite.com/d/turkey--all-locations/all-events/
 2. Click into an event
