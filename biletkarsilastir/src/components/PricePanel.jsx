@@ -78,7 +78,7 @@ export default function PricePanel({ event, onClose }) {
                       <span className="platform-cat">{data.category}</span>
                     )}
                     <a
-                      href={data.url}
+                      href={data.url || p.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="buy-btn"

@@ -558,5 +558,149 @@
     "image_url": "favicon.ico",
     "biletix_url": "https://www.biletix.com/performance/5LW76/001/TURKIYE/tr",
     "discovery_source_url": "https://www.biletix.com/performance/5LW76/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-tofas-aliaga-petkim-spor-kulubu-5yx15-001",
+    "name": "Tofaş - Aliağa Petkim Spor Kulübü",
+    "venue": "place Tofaş Spor Salonu, Bursa",
+    "date": "10 Mayıs 2026 Pazar\n•\n15:30",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5YX15/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5YX15/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-sagopa-kajmer-5ap03-001",
+    "name": "Sagopa Kajmer",
+    "venue": "place Holly Stone Performance Hall - Isparta, Isparta",
+    "date": "17 Mayıs 2026 Pazar\n•\n22:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5AP03/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5AP03/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-sagopa-kajmer-5mka0-001",
+    "name": "Sagopa Kajmer",
+    "venue": "place Anemon Trabzon Otel , Trabzon",
+    "date": "22 Mayıs 2026 Cuma\n•\n20:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5MKA0/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5MKA0/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-sagopa-kajmer-5dh05-001",
+    "name": "Sagopa Kajmer",
+    "venue": "place Club Inferno Bursa, Bursa",
+    "date": "7 Haziran 2026 Pazar\n•\n23:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5DH05/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5DH05/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-kenan-dogulu-5jb63-003",
+    "name": "Kenan Doğulu",
+    "venue": "place Isonem Park - Göztepe Gürsel Aksel Spor ve Sağlıkl..., İzmir",
+    "date": "24 Mayıs 2026 Pazar\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5JB63/003/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5JB63/003/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-kenan-dogulu-5jb64-003",
+    "name": "Kenan Doğulu",
+    "venue": "place Çotanak Spor Kompleksi, Giresun",
+    "date": "10 Haziran 2026 Çarşamba\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5JB64/003/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5JB64/003/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-kenan-dogulu-5jb35-001",
+    "name": "Kenan Doğulu",
+    "venue": "place Çukurova Üniversitesi Açıkhava Tiyatrosu, Adana",
+    "date": "20 Eylül 2026 Pazar\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5JB35/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5JB35/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-melike-sahin-5dt65-001",
+    "name": "Melike Şahin",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "27 Temmuz 2026 Pazartesi\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5DT65/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5DT65/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-melike-sahin-5dt66-001",
+    "name": "Melike Şahin",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "28 Temmuz 2026 Salı\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5DT66/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5DT66/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-y-ld-z-tilbe-5jbac-001",
+    "name": "Yıldız Tilbe",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "17 Ağustos 2026 Pazartesi\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5JBAC/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5JBAC/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-y-ld-z-tilbe-5jbad-001",
+    "name": "Yıldız Tilbe",
+    "venue": "place Harbiye Cemil Topuzlu Açıkhava Tiyatrosu, İstanbul",
+    "date": "14 Ekim 2026 Çarşamba\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5JBAD/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5JBAD/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-dedubluman-5rg27-001",
+    "name": "Dedublüman",
+    "venue": "place Tarihi Havagazı Fabrikası , İzmir",
+    "date": "7 Haziran 2026 Pazar\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5RG27/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5RG27/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-dedubluman-5fgd5-001",
+    "name": "Dedublüman",
+    "venue": "place Diyarbakır Sezai Karakoç Kültür ve Kongre Merkezi, Diyarbakır",
+    "date": "17 Haziran 2026 Çarşamba\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5FGD5/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5FGD5/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-dedubluman-ayna-5fgd6-001",
+    "name": "Dedublüman - Ayna",
+    "venue": "place Orpheus Açık Hava Amfi Sahnesi, Şanlıurfa",
+    "date": "18 Haziran 2026 Perşembe\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5FGD6/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5FGD6/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-dedubluman-afra-5fgd7-001",
+    "name": "Dedublüman - Afra",
+    "venue": "place GOPSM – Gaziantep Odeon Performans Sanatları Merke..., Gaziantep",
+    "date": "19 Haziran 2026 Cuma\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5FGD7/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5FGD7/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "biletix-dedubluman-5sal1-001",
+    "name": "Dedublüman",
+    "venue": "place Altınoluk Amfi Tiyatro, Balıkesir",
+    "date": "11 Temmuz 2026 Cumartesi\n•\n21:00",
+    "image_url": "favicon.ico",
+    "biletix_url": "https://www.biletix.com/performance/5SAL1/001/TURKIYE/tr",
+    "discovery_source_url": "https://www.biletix.com/performance/5SAL1/001/TURKIYE/tr"
   }
 ]
