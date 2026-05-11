@@ -7,10 +7,16 @@ const axios = require('axios');
 const { launchBrowser } = require('./lib/browser');
 const { signPayload } = require('./lib/sign');
 const biletix = require('./collectors/biletix');
+const bubilet = require('./collectors/bubilet');
+const biletino = require('./collectors/biletino');
+const mobilet = require('./collectors/mobilet');
 const passo = require('./collectors/passo');
 
 const COLLECTORS = [
   { id: 'biletix', key: 'biletix_url', mod: biletix },
+  { id: 'bubilet', key: 'bubilet_url', mod: bubilet },
+  { id: 'biletino', key: 'biletino_url', mod: biletino },
+  { id: 'mobilet', key: 'mobilet_url', mod: mobilet },
   { id: 'passo', key: 'passo_url', mod: passo },
 ];
 
@@ -117,7 +123,7 @@ async function main() {
   const allEvents = JSON.parse(fs.readFileSync(trackerPath, 'utf8'));
   const events = allEvents
     .filter((event) => !onlyEvent || event.internal_name === onlyEvent)
-    .filter((event) => event.biletix_url || event.passo_url);
+    .filter((event) => event.biletix_url || event.bubilet_url || event.biletino_url || event.mobilet_url || event.passo_url);
 
   console.log(`[desktop-scraper] ${events.length} desktop events to process`);
   if (!events.length) return;

@@ -702,5 +702,218 @@
     "image_url": "favicon.ico",
     "biletix_url": "https://www.biletix.com/performance/5SAL1/001/TURKIYE/tr",
     "discovery_source_url": "https://www.biletix.com/performance/5SAL1/001/TURKIYE/tr"
+  },
+  {
+    "internal_name": "bubilet-sebnem-ferah-istanbul-2026",
+    "name": "Şebnem Ferah",
+    "venue": "KüçükÇiftlik Park",
+    "date": "3 Haziran 2026",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/sebnem-ferah",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/sebnem-ferah-32728.png",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/sebnem-ferah"
+  },
+  {
+    "internal_name": "bubilet-yalin-bir-buyulu-gece-istanbul-2026",
+    "name": "Yalın - Bir Büyülü Gece",
+    "venue": "Volkswagen Arena",
+    "date": "22-24 Mayıs 2026",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/yalin-bir-buyulu-gece-",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/yalin-bir-buyulu-gece--56808.png",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/yalin-bir-buyulu-gece-"
+  },
+  {
+    "internal_name": "bubilet-lp-konseri-istanbul-2026",
+    "name": "LP Konseri",
+    "venue": "KüçükÇiftlik Park",
+    "date": "14 Ağustos 2026",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/lp-konseri-",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/lp-konseri--28853.jpg",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/lp-konseri-"
+  },
+  {
+    "internal_name": "biletino-gaming-istanbul-2026",
+    "name": "Gaming İstanbul 2026 - GIST 2026",
+    "venue": "İstanbul Kongre Merkezi",
+    "date": "18 Eylül 2026",
+    "biletino_url": "https://biletino.com/tr/e-1axa/gaming-istanbul-2026-uluslararasi-oyun-ve-dijital-eglence-gist-2026/",
+    "image_url": "https://resources-biletino.s3.eu-west-1.amazonaws.com/content/event/60814/1920x1080.jpg",
+    "discovery_source_url": "https://biletino.com/tr/e-1axa/gaming-istanbul-2026-uluslararasi-oyun-ve-dijital-eglence-gist-2026/"
+  },
+  {
+    "internal_name": "biletino-decathlon-mayfest-2026",
+    "name": "Decathlon Mayfest",
+    "venue": "Kadıköy Festival Park",
+    "date": "09 Mayıs 2026",
+    "biletino_url": "https://biletino.com/en/e-1990/decathlon-mayfest/"
+  },
+  {
+    "internal_name": "mobilet-koray-candemir-kendine-uzak-2026",
+    "name": "Koray Candemir - Kendine Uzak Albüm Lansman Konseri",
+    "venue": "DasDas İstanbul",
+    "date": "09 Mayıs 2026 22:00",
+    "mobilet_url": "https://mobilet.com/tr/event/koray-candemir-kendine-uzak-album-lansman-konseri-54285/"
+  },
+  {
+    "internal_name": "mobilet-100-metal-sunar-fabienne-erni-2026",
+    "name": "%100 Metal Sunar: Fabienne Erni",
+    "venue": "Blind",
+    "date": "13 Mayıs 2026 21:30",
+    "mobilet_url": "https://mobilet.com/tr/event/100-metal-sunar-fabienne-erni-52806/"
+  },
+  {
+    "internal_name": "bubilet-ben-fidel-oyunu-ben-fidel-oyunu",
+    "name": "Ben Fidel Oyunu",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/ben-fidel-oyunu-55566.jpg",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/ben-fidel-oyunu",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/ben-fidel-oyunu"
+  },
+  {
+    "internal_name": "bubilet-unutulmaz-gun-unutulmaz-gun",
+    "name": "Unutulmaz Gün",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/unutulmaz-gun-91800.png",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/unutulmaz-gun",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/unutulmaz-gun"
+  },
+  {
+    "internal_name": "bubilet-matcha-workshop-matcha-workshop",
+    "name": "Matcha Workshop",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/matcha-workshop-48668.jpg",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/matcha-workshop",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/matcha-workshop"
+  },
+  {
+    "internal_name": "bubilet-highlights-in-turkiye-workshop-meze-atolyesi-highlights-in-turkiye-workshop-meze-atolyesim",
+    "name": "Highlights in Türkiye Workshop | Meze Atölyesi",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/highlights-in-turkiye-workshop-meze-atolyesim-74931.jpg",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/highlights-in-turkiye-workshop-meze-atolyesim",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/highlights-in-turkiye-workshop-meze-atolyesim"
+  },
+  {
+    "internal_name": "bubilet-k-smetse-olur-1-sezon-quiz-night-kismetse-olur-2015-2017-quiz-night",
+    "name": "Kısmetse Olur (1.Sezon) Quiz Night",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/kismetse-olur-1-sezon-quiz-night-80012.png",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/kismetse-olur-2015-2017-quiz-night",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/kismetse-olur-2015-2017-quiz-night"
+  },
+  {
+    "internal_name": "bubilet-aykut-pala-sikayet-kutusu-eglenceli-sikayetler-gecesi-aykut-pala-sikayet-kutusu-eglenceli-sikayetler-gecesi",
+    "name": "Aykut Pala - Şikayet Kutusu (Eğlenceli Şikayetler Gecesi)",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/aykut-pala-sikayet-kutusu-eglenceli-sikayetler-gecesi--90782.jpeg",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/aykut-pala-sikayet-kutusu-eglenceli-sikayetler-gecesi-",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/aykut-pala-sikayet-kutusu-eglenceli-sikayetler-gecesi-"
+  },
+  {
+    "internal_name": "bubilet-blok3-la-catedral-blok3-la-catedral",
+    "name": "Blok3: La Catedral",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/blok3-la-catedral-47434.jpg",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/blok3-la-catedral",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/blok3-la-catedral"
+  },
+  {
+    "internal_name": "bubilet-faz-l-say-jazz-quintet-fazil-say-jazz-quintet",
+    "name": "Fazıl Say Jazz Quintet",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/fazil-say-jazz-quintet-say-plays-jazz-on-tour-with-skoda-91953.jpg",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/fazil-say-jazz-quintet",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/fazil-say-jazz-quintet"
+  },
+  {
+    "internal_name": "bubilet-mabel-matiz-mabel-matiz-konseri",
+    "name": "Mabel Matiz",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/mabel-matiz-konseri--54675.png",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/mabel-matiz-konseri-",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/mabel-matiz-konseri-"
+  },
+  {
+    "internal_name": "bubilet-melike-sahin-melike-sahin-konseri",
+    "name": "Melike Şahin",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/melike-sahin-konseri--35713.png",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/melike-sahin-konseri-",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/melike-sahin-konseri-"
+  },
+  {
+    "internal_name": "bubilet-burda-olan-burda-kal-r-burda-olan-burda-kalir",
+    "name": "Burda Olan Burda Kalır",
+    "date": "19 Nisan 2026",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/burda-olan-burda-kalir-16898.png",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/burda-olan-burda-kalir",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/burda-olan-burda-kalir"
+  },
+  {
+    "internal_name": "bubilet-s-la-konseri-sila",
+    "name": "Sıla Konseri",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/-sila--31739.jpg",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/-sila-",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/-sila-"
+  },
+  {
+    "internal_name": "bubilet-harry-potter-ve-azkaban-tutsag-tm-in-concert-harry-potter-ve-azkaban-tutsagi-in-concert",
+    "name": "Harry Potter ve Azkaban Tutsağı™ In Concert",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/harry-potter-ve-azkaban-tutsagi-in-concert-48318.jpg",
+    "bubilet_url": "https://www.bubilet.com.tr/istanbul/etkinlik/harry-potter-ve-azkaban-tutsagi-in-concert",
+    "discovery_source_url": "https://www.bubilet.com.tr/istanbul/etkinlik/harry-potter-ve-azkaban-tutsagi-in-concert"
+  },
+  {
+    "internal_name": "bubilet-hakan-altun-hakan-altun-konseri",
+    "name": "Hakan Altun",
+    "image_url": "https://cdn.bubilet.com.tr/cdn-cgi/image/width=1200,quality=100/files/Etkinlik/hakan-altun-konseri--77736.jpg",
+    "bubilet_url": "https://www.bubilet.com.tr/ankara/etkinlik/hakan-altun-konseri-",
+    "discovery_source_url": "https://www.bubilet.com.tr/ankara/etkinlik/hakan-altun-konseri-"
+  },
+  {
+    "internal_name": "biletino-decathlon-mayfest-tr-e-1990",
+    "name": "DECATHLON MAYFEST",
+    "venue": "İstanbul, Kadıköy",
+    "image_url": "https://resources-biletino.s3.eu-west-1.amazonaws.com/content/event/58644/1920x1080.jpg",
+    "biletino_url": "https://biletino.com/tr/e-1990/",
+    "discovery_source_url": "https://biletino.com/tr/e-1990/decathlon-mayfest/"
+  },
+  {
+    "internal_name": "biletino-linda-presents-miss-monique-tr-e-1b4q",
+    "name": "Linda Presents: Miss Monique",
+    "venue": "İstanbul, Sarıyer",
+    "image_url": "https://resources-biletino.s3.eu-west-1.amazonaws.com/content/event/61082/1920x1080.jpg",
+    "biletino_url": "https://biletino.com/tr/e-1b4q/",
+    "discovery_source_url": "https://biletino.com/tr/e-1b4q/linda-presents-miss-monique/"
+  },
+  {
+    "internal_name": "biletino-zamna-x-mo-homecoming-2026-tr-e-185j",
+    "name": "ZAMNA x MO Homecoming 2026",
+    "venue": "İstanbul, Sarıyer",
+    "date": "06 Haziran 2026",
+    "image_url": "https://resources-biletino.s3.eu-west-1.amazonaws.com/content/event/57223/1920x1080.jpg",
+    "biletino_url": "https://biletino.com/tr/e-185j/",
+    "discovery_source_url": "https://biletino.com/tr/e-185j/zamna-x-mo-homecoming-2026/"
+  },
+  {
+    "internal_name": "passo-10515320-10515320",
+    "name": "Passo 10515320",
+    "passo_url": "https://www.passo.com.tr/tr/etkinlik/anyma-presents-aeden-atakoy-marina-arena-passo/10515320",
+    "discovery_source_url": "https://www.passo.com.tr/tr/etkinlik/anyma-presents-aeden-atakoy-marina-arena-passo/10515320"
+  },
+  {
+    "internal_name": "passo-10715323-10715323",
+    "name": "Passo 10715323",
+    "date": "12 Temmuz 2026",
+    "passo_url": "https://www.passo.com.tr/tr/etkinlik/pantera-atakoy-marina-arena/10715323",
+    "discovery_source_url": "https://www.passo.com.tr/tr/etkinlik/pantera-atakoy-marina-arena/10715323"
+  },
+  {
+    "internal_name": "passo-10888382-10888382",
+    "name": "Passo 10888382",
+    "passo_url": "https://www.passo.com.tr/tr/etkinlik/x-by-adriatique-atakoy-marina-arena-elektronik-muzik-biletleri-passo/10888382",
+    "discovery_source_url": "https://www.passo.com.tr/tr/etkinlik/x-by-adriatique-atakoy-marina-arena-elektronik-muzik-biletleri-passo/10888382"
+  },
+  {
+    "internal_name": "passo-10428320-10428320",
+    "name": "Passo 10428320",
+    "date": "24 Haziran 2026",
+    "passo_url": "https://www.passo.com.tr/tr/etkinlik/scorpions-besiktas-tupras-stadyumu-konser-biletleri/10428320",
+    "discovery_source_url": "https://www.passo.com.tr/tr/etkinlik/scorpions-besiktas-tupras-stadyumu-konser-biletleri/10428320"
+  },
+  {
+    "internal_name": "passo-11490321-11490321",
+    "name": "Passo 11490321",
+    "passo_url": "https://www.passo.com.tr/tr/etkinlik/sunny-hill-festival-2026-tickets/11490321",
+    "discovery_source_url": "https://www.passo.com.tr/tr/etkinlik/sunny-hill-festival-2026-tickets/11490321"
   }
 ]
