@@ -3,6 +3,9 @@ import React, { useEffect, useRef, useState } from 'react';
 const PLATFORM_COLORS = {
   biletix:      '#E8472A',
   passo:        '#00A651',
+  bubilet:      '#7C3AED',
+  biletino:     '#F59E0B',
+  mobilet:      '#111827',
   eventbrite:   '#F05537',
   ticketmaster: '#026CDF',
 };
@@ -10,7 +13,6 @@ const PLATFORM_COLORS = {
 const API_URL = import.meta.env.VITE_API_URL || '';
 
 async function fetchHistory(eventId) {
-  if (!API_URL) return null;
   try {
     const res = await fetch(`${API_URL}/api/events/${eventId}/history?hours=48`);
     if (!res.ok) return null;

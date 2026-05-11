@@ -4,6 +4,16 @@ const { verifySignature } = require('../sign');
 
 const router = express.Router();
 
+const PLATFORM_DEFAULTS = {
+  biletix:      { name: 'Biletix',      base_url: 'https://www.biletix.com',      color: '#E8472A' },
+  passo:        { name: 'Passo',         base_url: 'https://www.passo.com.tr',     color: '#00A651' },
+  bubilet:      { name: 'Bubilet',       base_url: 'https://www.bubilet.com.tr',   color: '#7C3AED' },
+  biletino:     { name: 'Biletino',      base_url: 'https://biletino.com',         color: '#F59E0B' },
+  mobilet:      { name: 'Mobilet',       base_url: 'https://www.mobilet.com',      color: '#111827' },
+  eventbrite:   { name: 'Eventbrite',    base_url: 'https://www.eventbrite.com',   color: '#F05537' },
+  ticketmaster: { name: 'Ticketmaster',  base_url: 'https://www.ticketmaster.com', color: '#026CDF' },
+};
+
 function requireSignature(req, res, next) {
   const secret = process.env.INGEST_SECRET;
   if (!secret) {
@@ -36,16 +46,32 @@ router.post('/ingest', requireSignature, async (req, res) => {
 
   for (const r of results) {
     if (!r.platform_id) continue;
+    const platform = PLATFORM_DEFAULTS[r.platform_id] || {
+      name: r.platform_id,
+      base_url: r.url || r.raw_url || 'https://example.com',
+      color: '#64748B',
+    };
 
     await sql(
-      `INSERT INTO event_platform_links (event_id, platform_id, external_url, platform_event_id, last_status, last_status_at)
-       VALUES ($1, $2, $3, $4, $5, $6)
+      `INSERT INTO platforms (id, name, base_url, color)
+       VALUES ($1, $2, $3, $4)
+       ON CONFLICT (id) DO UPDATE
+         SET name = EXCLUDED.name,
+             base_url = EXCLUDED.base_url,
+             color = EXCLUDED.color`,
+      [r.platform_id, platform.name, platform.base_url, platform.color]
+    );
+
+    await sql(
+      `INSERT INTO event_platform_links (event_id, platform_id, external_url, platform_event_id, seat_category, last_status, last_status_at)
+       VALUES ($1, $2, $3, $4, $5, $6, $7)
        ON CONFLICT (event_id, platform_id) DO UPDATE
          SET external_url      = COALESCE(EXCLUDED.external_url, event_platform_links.external_url),
              platform_event_id = COALESCE(EXCLUDED.platform_event_id, event_platform_links.platform_event_id),
+             seat_category     = COALESCE(EXCLUDED.seat_category, event_platform_links.seat_category),
              last_status       = EXCLUDED.last_status,
              last_status_at    = EXCLUDED.last_status_at`,
-      [event.id, r.platform_id, r.url || r.raw_url || null, r.platform_event_id || null, r.status, now]
+      [event.id, r.platform_id, r.url || r.raw_url || null, r.platform_event_id || null, r.category || r.seat_category || null, r.status, now]
     );
 
     if (r.status === 'ok' && Number.isFinite(r.amount)) {

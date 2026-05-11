@@ -12,6 +12,7 @@ export default function PricePanel({ event, onClose }) {
   const cheapestId = getCheapestPlatform(event.prices);
   const availPlatforms = PLATFORMS.filter(p => event.prices[p.id]?.available);
   const [activePlatforms, setActivePlatforms] = useState(availPlatforms.map(p => p.id));
+  const panelMeta = [event.date, event.time, event.venue, event.city].filter(Boolean).join(' · ') || 'Etkinlik detayları yakında';
 
   const togglePlatform = (id) => {
     setActivePlatforms(prev =>
@@ -51,7 +52,7 @@ export default function PricePanel({ event, onClose }) {
       <div className="price-panel-header">
         <div>
           <h2 className="panel-title">{event.name}</h2>
-          <p className="panel-sub">{event.date} · {event.time} · {event.venue}, {event.city}</p>
+          <p className="panel-sub">{panelMeta}</p>
         </div>
         <button className="close-btn" onClick={onClose} aria-label="Kapat">×</button>
       </div>
@@ -122,11 +123,13 @@ export default function PricePanel({ event, onClose }) {
 
           <PriceChart event={event} activePlatforms={activePlatforms} />
 
-          <p className="panel-desc">{event.description}</p>
+          {event.description && <p className="panel-desc">{event.description}</p>}
 
-          <div className="tag-list">
-            {event.tags.map(t => <span key={t} className="tag">#{t}</span>)}
-          </div>
+          {!!event.tags?.length && (
+            <div className="tag-list">
+              {event.tags.map(t => <span key={t} className="tag">#{t}</span>)}
+            </div>
+          )}
         </div>
       </div>
     </div>

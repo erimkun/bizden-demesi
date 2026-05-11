@@ -3,6 +3,9 @@ const { sql, initSchema } = require('./db');
 const PLATFORMS = [
   { id: 'biletix',      name: 'Biletix',      base_url: 'https://www.biletix.com',      color: '#E8472A' },
   { id: 'passo',        name: 'Passo',         base_url: 'https://www.passo.com.tr',     color: '#00A651' },
+  { id: 'bubilet',      name: 'Bubilet',       base_url: 'https://www.bubilet.com.tr',   color: '#7C3AED' },
+  { id: 'biletino',     name: 'Biletino',      base_url: 'https://biletino.com',         color: '#F59E0B' },
+  { id: 'mobilet',      name: 'Mobilet',       base_url: 'https://www.mobilet.com',      color: '#111827' },
   { id: 'eventbrite',   name: 'Eventbrite',    base_url: 'https://www.eventbrite.com',   color: '#F05537' },
   { id: 'ticketmaster', name: 'Ticketmaster',  base_url: 'https://www.ticketmaster.com', color: '#026CDF' },
 ];

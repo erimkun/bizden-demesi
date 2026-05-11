@@ -24,9 +24,12 @@ export default function EventCard({ event, selected, onClick }) {
   const best = getBestPrice(event.prices);
   const cheapestId = getCheapestPlatform(event.prices);
   const cheapest = PLATFORMS.find(p => p.id === cheapestId);
-  const allHistory = Object.values(event.priceHistory)[0] || [];
+  const allHistory = Object.values(event.priceHistory || {})[0] || [];
   const change = get24hChange(allHistory);
   const availLabel = AVAIL_LABELS[event.availability];
+  const categoryLabel = CAT_LABELS[event.category] || 'Etkinlik';
+  const dateLine = [event.date, event.time].filter(Boolean).join(' · ') || 'Tarih yakında';
+  const placeLine = [event.venue, event.city].filter(Boolean).join(', ') || 'Mekan yakında';
 
   const availPlatforms = PLATFORMS.filter(p =>
     event.prices[p.id]?.available && event.prices[p.id]?.amount !== null
@@ -101,13 +104,13 @@ export default function EventCard({ event, selected, onClick }) {
     >
       <div className="event-card-header">
         <div className="event-meta">
-          <span className={`cat-badge cat-${event.category}`}>{CAT_LABELS[event.category]}</span>
+          <span className={`cat-badge cat-${event.category}`}>{categoryLabel}</span>
           {availLabel && <span className="avail-badge">{availLabel}</span>}
         </div>
         <h3 className="event-name">{event.name}</h3>
         <div className="event-info">
-          <span>{event.date} · {event.time}</span>
-          <span>{event.venue}, {event.city}</span>
+          <span>{dateLine}</span>
+          <span>{placeLine}</span>
         </div>
       </div>
 
@@ -124,12 +127,12 @@ export default function EventCard({ event, selected, onClick }) {
       </div>
 
       <div className="event-card-platforms">
-        {availPlatforms.map(p => (
+        {availPlatforms.length ? availPlatforms.map(p => (
           <span key={p.id} className="platform-pill" style={{ borderColor: p.color }}>
             <span className="platform-dot" style={{ background: p.color }} />
             {p.name}
           </span>
-        ))}
+        )) : <span className="platform-pill">Fiyat bekleniyor</span>}
       </div>
     </div>
   );

@@ -1,6 +1,9 @@
 export const PLATFORMS = [
   { id: 'biletix',     name: 'Biletix',      url: 'https://www.biletix.com',          color: '#E8472A' },
   { id: 'passo',       name: 'Passo',         url: 'https://www.passo.com.tr',         color: '#00A651' },
+  { id: 'bubilet',     name: 'Bubilet',       url: 'https://www.bubilet.com.tr',       color: '#7C3AED' },
+  { id: 'biletino',    name: 'Biletino',      url: 'https://biletino.com',             color: '#F59E0B' },
+  { id: 'mobilet',     name: 'Mobilet',       url: 'https://www.mobilet.com',          color: '#111827' },
   { id: 'eventbrite',  name: 'Eventbrite',    url: 'https://www.eventbrite.com',       color: '#F05537' },
   { id: 'ticketmaster',name: 'Ticketmaster',  url: 'https://www.ticketmaster.com',     color: '#026CDF' },
 ];

@@ -28,10 +28,10 @@ export default function App() {
     if (search.trim()) {
       const q = search.toLowerCase();
       list = list.filter(e =>
-        e.name.toLowerCase().includes(q) ||
-        e.venue.toLowerCase().includes(q) ||
-        e.city.toLowerCase().includes(q) ||
-        e.tags.some(t => t.includes(q))
+        (e.name || '').toLowerCase().includes(q) ||
+        (e.venue || '').toLowerCase().includes(q) ||
+        (e.city || '').toLowerCase().includes(q) ||
+        (e.tags || []).some(t => String(t).toLowerCase().includes(q))
       );
     }
     if (sortBy === 'price-asc') {
