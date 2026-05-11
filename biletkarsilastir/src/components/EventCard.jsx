@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import { getBestPrice, getCheapestPlatform, get24hChange, formatPrice } from '../utils/priceUtils';
+import { getBestPrice, getCheapestPlatform, get24hChange, formatPrice, isEventPast } from '../utils/priceUtils';
 import { PLATFORMS } from '../data/mockData';
 
 gsap.registerPlugin(useGSAP);
@@ -30,6 +30,7 @@ export default function EventCard({ event, selected, onClick }) {
   const categoryLabel = CAT_LABELS[event.category] || 'Etkinlik';
   const dateLine = [event.date, event.time].filter(Boolean).join(' · ') || 'Tarih yakında';
   const placeLine = [event.venue, event.city].filter(Boolean).join(', ') || 'Mekan yakında';
+  const past = isEventPast(event);
 
   const availPlatforms = PLATFORMS.filter(p =>
     event.prices[p.id]?.available && event.prices[p.id]?.amount !== null
@@ -96,7 +97,7 @@ export default function EventCard({ event, selected, onClick }) {
   return (
     <div
       ref={cardRef}
-      className={`event-card${selected ? ' selected' : ''}`}
+      className={`event-card${selected ? ' selected' : ''}${past ? ' is-past' : ''}`}
       onClick={onClick}
       role="button"
       tabIndex={0}
@@ -105,6 +106,7 @@ export default function EventCard({ event, selected, onClick }) {
       <div className="event-card-header">
         <div className="event-meta">
           <span className={`cat-badge cat-${event.category}`}>{categoryLabel}</span>
+          {past && <span className="past-badge">Geçti</span>}
           {availLabel && <span className="avail-badge">{availLabel}</span>}
         </div>
         <h3 className="event-name">{event.name}</h3>
@@ -122,7 +124,7 @@ export default function EventCard({ event, selected, onClick }) {
         </div>
         <div className={`change-badge ${change > 0 ? 'up' : change < 0 ? 'down' : 'stable'}`}>
           {change > 0 ? '▲' : change < 0 ? '▼' : '—'}
-          {change !== 0 ? ` %${Math.abs(change)}` : ' Sabit'}
+          {change !== 0 ? ` %${Math.abs(change)}` : ' Geçmiş'}
         </div>
       </div>
 

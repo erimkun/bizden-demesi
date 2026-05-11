@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import PriceChart from './PriceChart';
 import { PLATFORMS } from '../data/mockData';
-import { getCheapestPlatform, formatPrice } from '../utils/priceUtils';
+import { getCheapestPlatform, formatPrice, isEventPast } from '../utils/priceUtils';
 
 gsap.registerPlugin(useGSAP);
 
@@ -13,6 +13,7 @@ export default function PricePanel({ event, onClose }) {
   const availPlatforms = PLATFORMS.filter(p => event.prices[p.id]?.available);
   const [activePlatforms, setActivePlatforms] = useState(availPlatforms.map(p => p.id));
   const panelMeta = [event.date, event.time, event.venue, event.city].filter(Boolean).join(' · ') || 'Etkinlik detayları yakında';
+  const past = isEventPast(event);
 
   const togglePlatform = (id) => {
     setActivePlatforms(prev =>
@@ -53,6 +54,7 @@ export default function PricePanel({ event, onClose }) {
         <div>
           <h2 className="panel-title">{event.name}</h2>
           <p className="panel-sub">{panelMeta}</p>
+          {past && <p className="panel-past-note">Etkinlik tarihi geçti; fiyatlar arşiv olarak gösteriliyor.</p>}
         </div>
         <button className="close-btn" onClick={onClose} aria-label="Kapat">×</button>
       </div>
@@ -106,7 +108,7 @@ export default function PricePanel({ event, onClose }) {
         </div>
 
         <div className="panel-right">
-          <div className="section-label">48 saatlik fiyat grafiği</div>
+          <div className="section-label">Tüm fiyat geçmişi</div>
 
           <div className="chart-legend">
             {PLATFORMS.filter(p => event.prices[p.id]?.available && event.prices[p.id]?.amount !== null).map(p => (

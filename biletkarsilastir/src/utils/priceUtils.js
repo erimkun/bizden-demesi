@@ -97,6 +97,51 @@ export function get24hChange(history) {
   return parseFloat(((last - dayAgo) / dayAgo * 100).toFixed(1));
 }
 
+const TR_MONTHS = {
+  ocak: 0,
+  subat: 1,
+  şubat: 1,
+  mart: 2,
+  nisan: 3,
+  mayis: 4,
+  mayıs: 4,
+  haziran: 5,
+  temmuz: 6,
+  agustos: 7,
+  ağustos: 7,
+  eylul: 8,
+  eylül: 8,
+  ekim: 9,
+  kasim: 10,
+  kasım: 10,
+  aralik: 11,
+  aralık: 11,
+};
+
+export function parseEventDate(value) {
+  if (!value) return null;
+  const text = String(value).replace(/\s+/g, ' ').trim();
+  const iso = text.match(/(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2}))?/);
+  if (iso) {
+    const [, y, m, d, hh = '23', mm = '59'] = iso;
+    return new Date(Number(y), Number(m) - 1, Number(d), Number(hh), Number(mm));
+  }
+
+  const tr = text.toLocaleLowerCase('tr-TR').match(/(\d{1,2})\s+([a-zçğıöşü]+)\s+(\d{4})(?:.*?(\d{1,2}):(\d{2}))?/i);
+  if (tr) {
+    const [, d, monthName, y, hh = '23', mm = '59'] = tr;
+    const month = TR_MONTHS[monthName];
+    if (month !== undefined) return new Date(Number(y), month, Number(d), Number(hh), Number(mm));
+  }
+
+  return null;
+}
+
+export function isEventPast(event, now = new Date()) {
+  const date = parseEventDate(event?.date);
+  return date ? date.getTime() < now.getTime() : false;
+}
+
 export function formatPrice(amount) {
   if (amount === null || amount === undefined) return '—';
   return '₺' + amount.toLocaleString('tr-TR');

@@ -13,7 +13,7 @@ import banner from './data/banner.png';
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin);
 
 export default function App() {
-  const { events, status, lastFetch, countdown, refresh } = usePriceData();
+  const { events, status, lastFetch, countdown, refresh, usingApi } = usePriceData();
   const appRef = useRef(null);
   const panelAnchorRef = useRef(null);
   const [showIntro, setShowIntro] = useState(true);
@@ -52,6 +52,7 @@ export default function App() {
 
   const selectedEvent = events.find(e => e.id === selectedId);
   const filteredKey = filtered.map(e => e.id).join('|');
+  const syncingLiveData = status === 'fetching' && !usingApi;
 
   const handleSelect = (id) => {
     setSelectedId(prev => prev === id ? null : id);
@@ -295,7 +296,7 @@ export default function App() {
             </div>
             <h1 className="hero-title">Fiyatı tek tek gezmeden, en iyi bileti aynı ekranda bul.</h1>
             <p className="hero-copy">
-              Etkinliğini seç, platform fiyatlarını ve 48 saatlik değişimi birlikte gör, sonra doğrudan satın alma adımına geç.
+              Etkinliğini seç, platform fiyatlarını ve kayıtlı tüm fiyat değişimini birlikte gör, sonra doğrudan satın alma adımına geç.
             </p>
           </div>
           <div className="header-visual">
@@ -332,12 +333,26 @@ export default function App() {
       </nav>
 
       <main className="main-content">
+        {syncingLiveData && (
+          <div className="live-sync-panel" role="status" aria-live="polite">
+            <div className="sync-orbit" aria-hidden="true">
+              <span />
+              <span />
+              <span />
+            </div>
+            <div>
+              <strong>Canlı fiyatlar getiriliyor</strong>
+              <p>İlk ekranda hızlı önizleme var; gerçek scrape sonuçları geldiğinde kartlar yumuşakça güncellenecek.</p>
+            </div>
+          </div>
+        )}
+
         {filtered.length === 0 ? (
           <div className="empty-state">
             <p>Arama kriterlerinize uygun etkinlik bulunamadı.</p>
           </div>
         ) : (
-          <div className="events-grid">
+          <div className={`events-grid${syncingLiveData ? ' syncing' : ''}`}>
             {filtered.map(ev => (
               <EventCard
                 key={ev.id}
@@ -371,7 +386,7 @@ export default function App() {
 
       <footer className="app-footer">
         <p>BiletKarşılaştır — Faz 2 · Fiyatlar {new Date().toLocaleDateString('tr-TR')} tarihi itibarıyla</p>
-        <p className="footer-note">Bu uygulama gerçek bilet satışı yapmaz. Fiyat bilgileri temsilidir.</p>
+        <p className="footer-note">Bu uygulama bilet satışı yapmaz; fiyat bilgileri platformlardan scrape edilerek arşivlenir.</p>
       </footer>
     </div>
   );

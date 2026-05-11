@@ -37,7 +37,7 @@ async function fetchEventsFromApi() {
 
 export function usePriceData() {
   const [events, setEvents] = useState(EVENTS);
-  const [status, setStatus] = useState('idle');
+  const [status, setStatus] = useState('fetching');
   const [lastFetch, setLastFetch] = useState(getLastFetchTime());
   const [countdown, setCountdown] = useState({ h: 4, m: 0, s: 0, diff: 14400000 });
   const [usingApi, setUsingApi] = useState(false);

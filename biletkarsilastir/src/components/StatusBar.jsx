@@ -7,8 +7,8 @@ export default function StatusBar({ status, lastFetch, countdown, onRefresh, ref
 
   const statusConfig = {
     idle:     { dot: '#3B6D11', label: 'Veriler güncel' },
-    fetching: { dot: '#BA7517', label: 'Güncelleniyor…', pulse: true },
-    updated:  { dot: '#3B6D11', label: 'Veriler güncellendi' },
+    fetching: { dot: '#BA7517', label: 'Canlı fiyatlar alınıyor…', pulse: true },
+    updated:  { dot: '#3B6D11', label: 'Canlı fiyatlar güncellendi' },
     error:    { dot: '#A32D2D', label: 'Güncelleme başarısız' },
   };
   const cfg = statusConfig[status] || statusConfig.idle;

@@ -400,6 +400,69 @@ body {
   padding: 1rem 1.25rem 1.5rem;
 }
 
+.live-sync-panel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(0, 92, 75, 0.22);
+  border-radius: 16px;
+  background: linear-gradient(120deg, rgba(218, 241, 230, 0.9), rgba(255, 255, 255, 0.82));
+  box-shadow: var(--shadow-soft);
+  padding: 0.88rem 1rem;
+  color: var(--c-muted);
+  overflow: hidden;
+  position: relative;
+}
+
+.live-sync-panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.7), transparent);
+  animation: syncSweep 1.9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.live-sync-panel strong {
+  display: block;
+  color: var(--c-text);
+  font-size: 0.9rem;
+}
+
+.live-sync-panel p {
+  font-size: 0.78rem;
+}
+
+.sync-orbit {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  flex: 0 0 auto;
+}
+
+.sync-orbit span {
+  border-radius: 7px;
+  background: var(--c-accent);
+  animation: syncBars 0.86s ease-in-out infinite;
+}
+
+.sync-orbit span:nth-child(2) { animation-delay: 0.12s; background: var(--c-highlight); }
+.sync-orbit span:nth-child(3) { animation-delay: 0.24s; background: #2c6fbd; }
+
+@keyframes syncBars {
+  0%, 100% { transform: scaleY(0.36); opacity: 0.55; }
+  50% { transform: scaleY(1); opacity: 1; }
+}
+
+@keyframes syncSweep {
+  0% { transform: translateX(-100%); }
+  52%, 100% { transform: translateX(100%); }
+}
+
 .events-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -410,6 +473,7 @@ body {
 .event-card {
   --mx: 50%;
   --my: 50%;
+  position: relative;
   border: 1px solid var(--c-border);
   border-radius: var(--radius-lg);
   background: var(--c-surface-solid);
@@ -457,6 +521,15 @@ body {
   box-shadow: 0 0 0 2px rgba(0, 92, 75, 0.25), var(--shadow-soft);
 }
 
+.event-card.is-past {
+  background: linear-gradient(180deg, #ffffff 0%, #f5f2ea 100%);
+}
+
+.event-card.is-past .event-name,
+.event-card.is-past .best-price {
+  color: #4c4639;
+}
+
 .event-card-header {
   padding: 1rem 1.1rem 0.82rem;
 }
@@ -469,7 +542,8 @@ body {
 }
 
 .cat-badge,
-.avail-badge {
+.avail-badge,
+.past-badge {
   font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.07em;
@@ -486,6 +560,11 @@ body {
 .avail-badge {
   background: #fff2dc;
   color: #a85b10;
+}
+
+.past-badge {
+  background: #2f2b24;
+  color: #fff5e6;
 }
 
 .event-name {
@@ -544,6 +623,29 @@ body {
 .change-badge.up { background: #ffe5e7; color: var(--c-danger); }
 .change-badge.down { background: #e8f8ef; color: var(--c-success); }
 .change-badge.stable { background: #ece7dc; color: var(--c-hint); }
+
+.events-grid.syncing .event-card {
+  animation: dataBreath 1.7s ease-in-out infinite;
+}
+
+.events-grid.syncing .event-card:nth-child(2n) {
+  animation-delay: 0.12s;
+}
+
+.events-grid.syncing .event-card:nth-child(3n) {
+  animation-delay: 0.24s;
+}
+
+@keyframes dataBreath {
+  0%, 100% {
+    filter: saturate(1);
+    transform: translateY(0);
+  }
+  50% {
+    filter: saturate(0.88);
+    transform: translateY(-2px);
+  }
+}
 
 .event-card-platforms {
   display: flex;
@@ -610,6 +712,17 @@ body {
 .panel-sub {
   font-size: 0.8rem;
   color: var(--c-muted);
+}
+
+.panel-past-note {
+  display: inline-flex;
+  margin-top: 0.45rem;
+  border-radius: 999px;
+  background: #2f2b24;
+  color: #fff5e6;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 800;
 }
 
 .close-btn {
@@ -739,6 +852,44 @@ body {
   flex-wrap: wrap;
   gap: 7px;
   margin-bottom: 12px;
+}
+
+.price-chart-shell {
+  position: relative;
+  height: 220px;
+  width: 100%;
+  border: 1px solid rgba(39, 34, 23, 0.08);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #fffdf8 0%, #f8f5ee 100%);
+  padding: 0.35rem;
+}
+
+.chart-loading {
+  position: absolute;
+  inset: 0.35rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 10px;
+  color: var(--c-hint);
+  font-size: 0.78rem;
+  background: repeating-linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.56) 0,
+    rgba(255, 255, 255, 0.56) 12px,
+    rgba(236, 232, 219, 0.42) 12px,
+    rgba(236, 232, 219, 0.42) 24px
+  );
+}
+
+.chart-loading span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c-highlight);
+  animation: pulse 0.82s ease-in-out infinite;
 }
 
 .legend-btn {
@@ -900,5 +1051,3 @@ body {
     flex-wrap: wrap;
   }
 }
-
-

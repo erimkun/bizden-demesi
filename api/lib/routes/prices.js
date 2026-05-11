@@ -51,14 +51,19 @@ router.get('/:id/history', async (req, res) => {
     const [event] = await sql('SELECT id, name FROM events WHERE id = $1', [req.params.id]);
     if (!event) return res.status(404).json({ success: false, error: 'Event not found' });
 
+    const allHistory = req.query.all === '1' || req.query.all === 'true';
     const hours = Math.min(parseInt(req.query.hours || '48', 10), 8760);
     const limit = Math.min(parseInt(req.query.limit || '200', 10), 1000);
-    const since = new Date(Date.now() - hours * 3600 * 1000).toISOString();
 
-    const params = [event.id, since];
+    const params = [event.id];
     let q = `SELECT platform_id, price, available, scraped_at
              FROM price_snapshots
-             WHERE event_id = $1 AND scraped_at >= $2`;
+             WHERE event_id = $1`;
+
+    if (!allHistory) {
+      params.push(new Date(Date.now() - hours * 3600 * 1000).toISOString());
+      q += ` AND scraped_at >= $${params.length}`;
+    }
 
     if (req.query.platform) {
       params.push(req.query.platform);
@@ -80,7 +85,7 @@ router.get('/:id/history', async (req, res) => {
       });
     }
 
-    res.json({ success: true, data: { event_id: event.id, event_name: event.name, hours, history } });
+    res.json({ success: true, data: { event_id: event.id, event_name: event.name, hours: allHistory ? null : hours, all: allHistory, history } });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }

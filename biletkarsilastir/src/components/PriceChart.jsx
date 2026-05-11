@@ -14,20 +14,52 @@ const API_URL = import.meta.env.VITE_API_URL || '';
 
 async function fetchHistory(eventId) {
   try {
-    const res = await fetch(`${API_URL}/api/events/${eventId}/history?hours=48`);
+    const res = await fetch(`${API_URL}/api/events/${eventId}/history?all=1&limit=1000`);
     if (!res.ok) return null;
     const json = await res.json();
     if (!json.success) return null;
-    // API returns { [platform]: [{ price, available, scraped_at }, ...] }
-    // Convert to { [platform]: number[] } for Chart.js
+    const labels = [];
     const result = {};
     for (const [pid, entries] of Object.entries(json.data.history)) {
-      result[pid] = entries.map(e => e.price);
+      result[pid] = entries
+        .filter(e => e.price !== null && e.available !== false)
+        .map(e => ({
+          x: formatHistoryLabel(e.scraped_at),
+          y: e.price,
+          scraped_at: e.scraped_at,
+        }));
+      for (const point of result[pid]) labels.push(point.x);
     }
-    return result;
+    return {
+      labels: [...new Set(labels)],
+      series: result,
+      fromApi: true,
+    };
   } catch {
     return null;
   }
+}
+
+function formatHistoryLabel(value) {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value || '');
+  return date.toLocaleDateString('tr-TR', { day: '2-digit', month: 'short' });
+}
+
+function fallbackHistory(priceHistory = {}) {
+  const maxLength = Math.max(0, ...Object.values(priceHistory).map(values => values?.length || 0));
+  const labels = Array.from({ length: maxLength }, (_, i) => {
+    const date = new Date();
+    date.setDate(date.getDate() - (maxLength - i - 1));
+    return date.toLocaleDateString('tr-TR', { day: '2-digit', month: 'short' });
+  });
+  const series = Object.fromEntries(
+    Object.entries(priceHistory).map(([pid, values]) => [
+      pid,
+      (values || []).map((price, i) => ({ x: labels[i], y: price })),
+    ])
+  );
+  return { labels, series, fromApi: false };
 }
 
 export default function PriceChart({ event, activePlatforms }) {
@@ -38,7 +70,7 @@ export default function PriceChart({ event, activePlatforms }) {
   useEffect(() => {
     setHistory(null);
     fetchHistory(event.id).then(apiHistory => {
-      setHistory(apiHistory || event.priceHistory || {});
+      setHistory(apiHistory || fallbackHistory(event.priceHistory || {}));
     });
   }, [event.id]);
 
@@ -48,31 +80,23 @@ export default function PriceChart({ event, activePlatforms }) {
     const ctx = canvasRef.current.getContext('2d');
     if (chartRef.current) chartRef.current.destroy();
 
-    const labels = Array.from({ length: 48 }, (_, i) => {
-      if (i % 8 === 0) {
-        const h = new Date();
-        h.setHours(h.getHours() - (48 - i));
-        return h.getHours() + ':00';
-      }
-      return '';
-    });
-
     const datasets = activePlatforms
-      .filter(pid => history[pid]?.length)
+      .filter(pid => history.series[pid]?.length)
       .map(pid => ({
         label: pid,
-        data: history[pid],
+        data: history.series[pid],
         borderColor: PLATFORM_COLORS[pid] || '#888',
-        backgroundColor: 'transparent',
-        borderWidth: 1.5,
-        pointRadius: 0,
+        backgroundColor: 'rgba(255,255,255,0)',
+        borderWidth: 2,
+        pointRadius: history.series[pid].length < 18 ? 2.5 : 0,
         pointHoverRadius: 4,
-        tension: 0.3,
+        tension: 0.32,
+        parsing: { xAxisKey: 'x', yAxisKey: 'y' },
       }));
 
     chartRef.current = new window.Chart(ctx, {
       type: 'line',
-      data: { labels, datasets },
+      data: { labels: history.labels, datasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -81,14 +105,14 @@ export default function PriceChart({ event, activePlatforms }) {
           legend: { display: false },
           tooltip: {
             callbacks: {
-              label: ctx => `${ctx.dataset.label}: ₺${ctx.raw?.toLocaleString('tr-TR')}`,
+              label: ctx => `${ctx.dataset.label}: ₺${ctx.raw?.y?.toLocaleString('tr-TR')}`,
             },
           },
         },
         scales: {
           x: {
             grid: { display: false },
-            ticks: { font: { size: 11 }, color: '#888', autoSkip: false, maxRotation: 0 },
+            ticks: { font: { size: 11 }, color: '#888', autoSkip: true, maxRotation: 0 },
           },
           y: {
             grid: { color: 'rgba(128,128,128,0.08)' },
@@ -106,10 +130,16 @@ export default function PriceChart({ event, activePlatforms }) {
   }, [event.id, activePlatforms, history]);
 
   return (
-    <div style={{ position: 'relative', height: 200, width: '100%' }}>
+    <div className="price-chart-shell">
       {history === null && (
-        <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#888', fontSize: 13 }}>
-          Yükleniyor…
+        <div className="chart-loading">
+          <span />
+          Fiyat geçmişi yükleniyor
+        </div>
+      )}
+      {history && !Object.values(history.series).some(points => points.length) && (
+        <div className="chart-loading">
+          Henüz fiyat geçmişi yok
         </div>
       )}
       <canvas ref={canvasRef} />
