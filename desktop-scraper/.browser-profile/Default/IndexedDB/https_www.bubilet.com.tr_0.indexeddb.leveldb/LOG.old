@@ -1,0 +1,6 @@
+2026/05/06-16:14:20.485 3ba0 Creating DB C:\Users\erden.aydogdu\Desktop\bizden-demesi\desktop-scraper\.browser-profile\Default\IndexedDB\https_www.bubilet.com.tr_0.indexeddb.leveldb since it was missing.
+2026/05/06-16:14:20.511 3ba0 Reusing MANIFEST C:\Users\erden.aydogdu\Desktop\bizden-demesi\desktop-scraper\.browser-profile\Default\IndexedDB\https_www.bubilet.com.tr_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/06-16:14:20.578 3ba0 Level-0 table #5: started
+2026/05/06-16:14:20.591 3ba0 Level-0 table #5: 1279 bytes OK
+2026/05/06-16:14:20.596 3ba0 Delete type=0 #3
+2026/05/06-16:14:20.598 813c Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
